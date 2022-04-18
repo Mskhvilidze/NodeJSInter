@@ -1,0 +1,7 @@
+extends layout 
+block content 
+ #showimage.card-header
+    h1 #{titel}
+    each article, i in articles
+     ul.list-group-item-primary
+        li.list-group= article.titel 

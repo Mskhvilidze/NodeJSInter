@@ -1,0 +1,16 @@
+{
+  "name": "nodejsinterproject",
+  "version": "1.0.0",
+  "description": "Inter Mailand",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Beka Mskhvilidze",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "pug": "^3.0.2"
+  }
+}

@@ -1,0 +1,42 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light#showimageNav
+  a.navbar-brand.navbarBackroundColor(href='/') Home 
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto.navbarBackroundColor
+      li.nav-item.active
+        a.nav-link(href='/add_article')
+          | Add Article 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='#') Forum 
+      li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          | Dropdown
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='#') Squad 
+          a.dropdown-item(href='#') Personal
+          .dropdown-divider
+          a.dropdown-item(href='/history') Trophäe 
+      li.nav-item
+        a.nav-link.disabled(href='#') Disabled
+    form.form-inline.my-2.my-lg-0.pull-right
+      #form-group
+        input.seachrArtile(type='search' placeholder='Search' aria-label='Search')
+        button(type='submit') Search 
+          script.
+            $('document').ready(function(){
+              $(".dropdown-menu").click(function(ev) {
+              $(".dropdown-menu").dropdown("toggle");
+              window.location.href='/history';
+              return false;
+                });
+                
+              $(".dropdown-menu a").click(function(ev) {
+                 window.location.href='/history';
+              $(".dropdown-menu").dropdown("toggle");
+              return false;
+                });
+            });
+
+              

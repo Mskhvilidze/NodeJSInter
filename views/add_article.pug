@@ -1,0 +1,18 @@
+extends layout 
+block content 
+       h1  #{titel}
+       form(action="" method="POST")
+         #form-group 
+              label.label.form-label(for="titelForArticle" value="") Titel
+              input.form-control(type="text" name="text" value="" placeholder="Titel")
+         #form-group
+              label.label.form-label(for="textForArticle" value="") Text 
+              textarea.form-control-sm(name="descriptionForArticle" placeholder="Text" id="editor")
+              br
+              input.btn.btn-primary(type="submit" value="Submit")
+       script.   
+              ClassicEditor
+              .create( document.querySelector('#editor') )
+              .catch( error => {
+              console.error( error );
+              } );
